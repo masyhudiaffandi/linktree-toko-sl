@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import Navbar from "../components/navbar/navbar";
 
 const inter = Inter(
   { 
@@ -22,11 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="bg-black">
         <Providers>
-          <Navbar>
-            {children}
-          </Navbar>
+          {children}
         </Providers>
       </body>
     </html>
