@@ -11,8 +11,10 @@ export default function Home() {
       <Navbar />
       <div className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-pink-500 transform rotate-45 rounded-full blur-md mix-blend-screen opacity-50 animate-aurora"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-pink-500 transform -rotate-45 rounded-full blur-md mix-blend-screen opacity-50 animate-aurora"></div>
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-green-500 rounded-full mix-blend-screen opacity-50 filter blur-xl"></div>
+            <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-pink-500 rounded-full mix-blend-screen opacity-50 filter blur-xl"></div>
+          </div>
         </div>
         <div className="card-container flex justify-center items-center">
           <Card />
@@ -21,4 +23,6 @@ export default function Home() {
     </main>
   );
 }
+
+
 
