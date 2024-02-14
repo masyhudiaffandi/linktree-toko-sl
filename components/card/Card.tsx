@@ -26,13 +26,12 @@ const Toko = [
 
 export default function App() {
   return (
-    // map TOKO
     <div className="flex flex-col justify-center items-center gap-4 w-[100vh]">
       {Toko.map((toko) => (
-        <Card key={toko.name} className="max-w-[340px] flex justify-between items-center w-[100vw] py-3 rounded-full">
+        <Card key={toko.name} className="max-w-[340px] flex justify-between items-center w-[100vw] py-3 rounded-full bg-black/20">
           <div className="flex items-center justify-between gap-10">
             <Avatar src={toko.image} size="lg"/>
-            <div className="nama w-22">
+            <div className="nama w-22 text-white">
               <h4>{toko.name}</h4>
             </div>
             <Button
