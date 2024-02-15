@@ -1,4 +1,3 @@
-import { CardBody } from '@nextui-org/react';
 export const Toko = [
     {
       "name": "Shopee",
