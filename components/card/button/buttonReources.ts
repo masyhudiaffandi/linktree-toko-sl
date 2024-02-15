@@ -2,7 +2,7 @@ import { CardBody } from '@nextui-org/react';
 export const Toko = [
     {
       "name": "Shopee",
-      "link": "https://www.shopee.com",
+      "link": "http://shopee.co.id/set_laundry",
       "image": "/public/toko.png"
     },
     {
@@ -12,12 +12,12 @@ export const Toko = [
     },
     {
       "name": "TokoPedia",
-      "link": "https://www.tokopedia.com",
+      "link": "https://tokopedia.link/set-laundry",
       "image": "/public/toko.png"
     },
     {
       "name": "Lazada",
-      "link": "https://www.lazada.com",
+      "link": "http://Lazada.co.id/tokosl",
       "image": "/public/toko.png"
     },
     {
