@@ -1,43 +1,33 @@
 import React from 'react'
-import {Button, ButtonGroup} from "@nextui-org/react";
-
-const LinkToko = [
-  {
-    "name": "Shopee",
-    "link": "www.shopee.com"
-  },
-  {
-    "name": "Tokopedia",
-    "link": "www.tokopedia.com"
-  },
-  {
-    "name": "Lazada",
-    "link": "www.lazada.com"
-  },
-  {
-    "name": "TikTok Shop",
-    "link": "www.tiktok.com"
-  },
-  {
-    "name": "Grosir",
-    "link": "web.whatsapp.com"
-  }
-]
+import { Toko, cardStyles, cardBody, cardName, cardButton } from "./buttonReources"
+import {Card, Button, Avatar} from "@nextui-org/react"
 
 const LinkButton = () => {
+  const openLink = (link: string | URL | undefined) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <>
-      {LinkToko.map((item) => (
-        <Button
-          key={item.name}
-          radius="full"
-          className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-        >
-          <a href={item.link}>{item.name}</a>
-        </Button>
+      {Toko.map((toko) => (
+        <Card key={toko.name} className={cardStyles}>
+          <div className={cardBody}>
+            <Avatar src={toko.image} size="lg"/>
+            <div className={cardName}>
+              <h4>{toko.name}</h4>
+            </div>
+            <Button
+              radius="full"
+              className={cardButton}
+              onClick={() => openLink(toko.link)}
+            >
+              Buka
+            </Button>
+          </div>
+        </Card>
       ))}
     </>
   );
 };
 
-export default LinkButton
+export default LinkButton;
